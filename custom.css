@@ -1,0 +1,12 @@
+.jumbotron {
+    min-height: 500px;
+    background-size: contain;
+}
+
+.hero-dog {
+    background-image: url("images/dogs.jpg");
+}
+
+.hero-cat {
+    background-image: url("images/cats.jpg");
+} 

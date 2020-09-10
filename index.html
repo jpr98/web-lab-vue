@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+    <title>Vue!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Vue homework</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.petco.com.mx/petco/en/" target="_blank">Petco</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://maskota.com.mx/?gclid=Cj0KCQjw-uH6BRDQARIsAI3I-UcPvvvOmm6_iMfLiRgQ5vlUsF07P1cbE8_Ze9_FommoDEGnmA2MoE8aAkn6EALw_wcB" target="_blank">+Kota</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="app">
+
+        <div class="jumbotron" v-bind:class="hero_class">
+          <h1 class="display-4">Hello, {{name}}!</h1>
+          <p class="lead">This is a website for animal fans!</p>
+          <hr class="my-4">
+          <form class="form-inline">
+            <p>Let me greet you!</p>
+            <div class="form-group mx-sm-3 mb-2">
+              <input type="text" class="form-control" id="name" placeholder="Your name" v-model="value">
+            </div>
+          </form>
+        </div>
+
+        <div class="row" style="margin: 40px;">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Dogs</h3>
+                <p class="card-text">If there are no dogs in heaven, then when I die I want to go where they went.</p>
+                <a @click="dogs" class="btn btn-primary">I prefer dogs!</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Cats</h3>
+                <p class="card-text">In ancient times cats were worshipped as gods; they have not forgotten this.</p>
+                <a @click="cats" class="btn btn-primary">I prefer cats!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-4" style="height: 300px;">
+          <label for="customRange1">Love for dogs</label>
+          <input type="range" class="custom-range" id="customRange1">
+          <label for="customRange1">Love for cats</label>
+          <input type="range" class="custom-range" id="customRange1">
+        </div>
+
+        <footer class="footer fixed-bottom bg-secondary" style="height: 50px;" ref="footer">
+          <div class="d-flex justify-content-center align-items-center">
+            <span class="align-self-center" style="color: white; margin-right: 10px;">This footer can be removed if you want to.</span>
+            <a @click="footer" class="btn btn-light">Remove</a>
+          </div>
+        </footer>
+
+      </div>
+
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
